@@ -1,25 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>ProfilSaya - Bima</title>
-    <link rel="stylesheet" href="style.css"> <!-- Perbaikan: "stylesheet" bukan "stylessheet" -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Bima</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="kartu-profil">
-        <img src="foto-profil.jpg" alt="Foto profil saya">
-        <h1>Bima Adi Pratama</h1>
-        <p>Siswa yang tertarik dengan teknologi dan desain. Selamat datang di website pertama!</p>
-        
-        <!-- Perbaikan besar di bagian ini: tag <a> tidak ditutup dan atribut salah -->
-        <a href="https://www.instagram.com/bimaaadipratamaa__" target="_blank">
-            Kunjungi Instagram Saya
-        </a>
 
-        <!-- Perbaikan penutup tag button -->
-        <button id="sapaButton">Sapa Saya!</button>
-    </div>
+    <header>
+        <nav class="menu-navigasi">
+            <div class="logo">
+                <a href="#">Bima Adi P.</a>
+            </div>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="https://www.instagram.com/bimaaadipratamaa__" target="_blank">Instagram</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script src="script.js"></script>
+    <main>
+        <section id="beranda" style="padding: 80px 20px;">
+            <h1>Selamat Datang di Website Saya</h1>
+            <p>Ini adalah contoh konten halaman utama.</p>
+        </section>
+        <section id="profil" style="padding: 80px 20px; background-color: #f4f4f4;">
+            <h2>Profil Saya</h2>
+            <p>Siswa yang tertarik dengan teknologi dan desain.</p>
+        </section>
+    </main>
+
 </body>
 </html>
 
