@@ -1,20 +1,60 @@
+
+/* Pengaturan Dasar Body */
 body {
-    background-color: #FFFFE0; /* Warna Kuning Cerah */
-    font-family: Arial, sans-serif; /* Jenis huruf yang bersih dan mudah dibaca */
-    color: #191970; /* Warna teks utama (Biru Gelap) */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-.kartu-profil {
-    width: 300px;
-    margin: 50px auto; /* 50px jarak atas/bawah, auto untuk menengahkan kiri/kanan */
-    padding: 20px;
-    background-color: white; /* Warna latar belakang kartu */
-    border-radius: 15px; /* Membuat sudut kartu menjadi melengkung */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
-    text-align: center; /* Menengahkan isi teks dalam kartu */
+/* Gaya untuk Header dan Navigasi */
+header {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed; /* Membuat menu tetap di atas saat di-scroll */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.kartu-profil img {
-    width: 150px;
-    border-radius: 50%; /* Trik untuk membuat gambar persegi menjadi lingkaran sempurna */
+.menu-navigasi {
+    display: flex; /* Membuat logo dan daftar menu sejajar */
+    justify-content: space-between; /* Mendorong logo ke kiri dan menu ke kanan */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Gaya untuk Logo */
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em; /* Ukuran font lebih besar */
+    font-weight: bold;
+}
+
+/* Menghilangkan bullet point dari daftar menu */
+.menu-navigasi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Membuat item menu sejajar horizontal */
+}
+
+/* Gaya untuk setiap item link di menu */
+.menu-navigasi ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none; /* Menghilangkan garis bawah link */
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi halus */
+}
+
+/* Efek saat kursor mouse diarahkan ke item menu */
+.menu-navigasi ul li a:hover {
+    background-color: #ddd;
+    color: black;
 }
