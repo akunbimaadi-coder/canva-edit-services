@@ -1,185 +1,24 @@
-<!DOCTYPE html>
+
+   <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Warkop  Bima</title>
+    <title>Menu Warkop Bima</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             background-color: #f4f4f4;
             color: #333;
-            scroll-behavior: smooth; /* Efek scroll halus */
+            scroll-behavior: smooth;
         }
         header {
-            background-color: #6f4e37; /* Warna coklat kopi */
+            background-color: #6f4e37;
             color: white;
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .menu-navigasi {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .logo a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .menu-navigasi ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        .menu-navigasi ul li {
-            margin-left: 20px;
-        }
-        .menu-navigasi ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .menu-navigasi ul li a:hover {
-            background-color: #8d6e63;
-        }
-        main {
-            max-width: 960px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        section {
-            background-color: white;
-            margin-bottom: 30px;
-            padding: 20px 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: #6f4e37;
-            border-bottom: 2px solid #f4f4f4;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        .item-menu {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 15px 0;
-            border-bottom: 1px dashed #ddd;
-        }
-        .item-menu:last-child {
-            border-bottom: none;
-        }
-        .detail-item {
-            margin-right: 15px;
-        }
-        .nama-item {
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        .deskripsi-item {
-            font-size: 0.9em;
-            color: #777;
-            margin-top: 4px;
-        }
-        .harga-item {
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #333;
-            white-space: nowrap;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #777;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <nav class="menu-navigasi">
-            <div class="logo">
-                <a href="#">Warkop Kita</a>
-            </div>
-            <ul>
-                <li><a href="#kopi">Kopi</a></li>
-                <li><a href="#non-kopi">Non-Kopi</a></li>
-                <li><a href="#makanan">Makanan</a></li>
-                <li><a href="#camilan">Camilan</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="kopi">
-            <h2>☕ Kopi Andalan</h2>
-            <div class="item-menu">
-                <div class="detail-item">
-                    <div class="nama-item">Kopi Tubruk Original</div>
-                    <div class="deskripsi-item">Kopi hitam klasik dengan ampas, diseduh langsung</div>
-                </div>
-                <span class="harga-item">Rp 5.000</span>
-            </div>
-            <div class="item-menu">
-                <div class="detail-item">
-                    <div class="nama-item">Kopi Susu Warkop</div>
-                    <div class="deskripsi-item">Kopi hitam dengan susu kental manis, panas atau dingin</div>
-                </div>
-                <span class="harga-item">Rp 7.000</span>
-            </div>
-            <div class="item-menu">
-                <div class="detail-item">
-                    <div class="nama-item">Kopi Jahe Hangat</div>
-                    <div class="deskripsi-item">Kopi hitam ditambah perasan jahe bakar untuk menghangatkan badan</div>
-                </div>
-                <span class="harga-item">Rp 8.000</span>
-            </div>
-            <div class="item-menu">
-                <div class="detail-item">
-                    <div class="nama-item">Es Kopi Susu Gula Aren</div>
-                    <div class="deskripsi-item">Menu kekinian, perpaduan espresso, susu segar, dan gula aren asli</div>
-                </div>
-                <span class="harga-item">Rp 12.000</span>
-            </div>
-            <div class="item-menu">
-                <div class="detail-item">
-                    <div class="nama-item">Kopi Sachet Pilihan</div>
-                    <div class="deskripsi-item">Kapal Api, Good Day, Indocafe, dll.</div>
-                </div>
-                <span class="harga-item">Rp 4.000</span>
-            </div>
-        </section>
-
-        <section id="non-kopi">
-            <h2>🍹 Minuman Segar & Hangat</h2>
-            <div class="item-menu">
-                <div class="detail-item"><div class="nama-item">Teh Manis / Tawar (Panas/Es)</div></div>
-                <span class="harga-item">Rp 4.000</span>
-            </div>
-            <div class="item-menu">
-                <div class="detail-item"><div class="nama-item">Es Jeruk Peras</div></div>
-                <span class="harga-item">Rp 6.000</span>
-            </div>
-            <div class="item-menu">
-                <div class="detail-item"><div class="nama-item">Susu Jahe Merah</div></div>
-                <span class="harga-item">Rp 10.000</span>
-            </div>
-            <div class="item-menu">
-                <div class="detail-item"><div class="nama-item">Coklat Panas / Es Coklat</div></div>
-                <span class="harga-
-            
+            box-shadow: 0 2px 4px rgba(
+         
