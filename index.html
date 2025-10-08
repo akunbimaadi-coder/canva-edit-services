@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Menu Warung Makni</title>
+    <title>Warung Makan Makni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Pengaturan Dasar Body */
-        body {
-            font-family: 'Arial', sans-serif;
+        /* Reset dan Dasar */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            background-color: #f3eee8; /* Warna latar belakang hangat */
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: #f3eee8;
             color: #333;
+            line-height: 1.6;
         }
 
         /* Header dan Navigasi */
@@ -43,19 +49,16 @@
 
         .menu-navigasi ul {
             list-style-type: none;
-            margin: 0;
-            padding: 0;
             display: flex;
         }
 
         .menu-navigasi ul li a {
-            display: block;
             color: white;
-            text-align: center;
-            padding: 20px 18px;
             text-decoration: none;
-            transition: background-color 0.3s, color 0.3s;
+            padding: 20px 18px;
+            display: block;
             font-weight: 500;
+            transition: 0.3s ease;
         }
 
         .menu-navigasi ul li a:hover {
@@ -63,23 +66,36 @@
             color: #4b2e1f;
         }
 
-        /* Kontainer Isi Halaman */
+        /* Hero Section */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 70px;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+        }
+
         .container {
-            max-width: 800px;
-            margin: 120px auto 40px auto; /* jarak dari header */
+            max-width: 900px;
+            margin: 40px auto;
             padding: 20px;
             background-color: #fff8f0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            animation: fadein 1s ease-in;
         }
 
-        h1 {
-            text-align: center;
-            color: #4b2e1f;
-            margin-bottom: 30px;
-        }
-
-        /* Judul Bagian */
         h2 {
             color: #4b2e1f;
             border-bottom: 2px solid #d3b8a3;
@@ -87,7 +103,6 @@
             margin-bottom: 15px;
         }
 
-        /* Daftar Menu */
         ul.menu-list {
             list-style-type: none;
             padding-left: 0;
@@ -112,6 +127,25 @@
             color: #777;
         }
 
+        /* Footer */
+        footer {
+            background-color: #4b2e1f;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        /* Animasi */
+        @keyframes fadein {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         /* Responsif */
         @media screen and (max-width: 600px) {
             .menu-navigasi {
@@ -130,15 +164,19 @@
                 padding: 15px 20px;
             }
 
+            .hero h1 {
+                font-size: 2em;
+            }
+
             .container {
-                margin: 100px 20px 30px 20px;
+                margin: 30px 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header dan Navigasi -->
+    <!-- Header -->
     <header>
         <div class="menu-navigasi">
             <div class="logo"><a href="#">Warkop Makni</a></div>
@@ -150,10 +188,16 @@
         </div>
     </header>
 
-    <!-- Konten Menu -->
-    <div class="container">
-        <h1>Daftar Menu</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Selamat Datang di Warkop Makni</h1>
+            <p>Tempat makan sederhana dengan rasa luar biasa!</p>
+        </div>
+    </section>
 
+    <!-- Menu Container -->
+    <div class="container">
         <!-- Menu Makanan -->
         <div id="makanan">
             <h2>Makanan</h2>
@@ -161,35 +205,4 @@
                 <li><span class="item-name">Nasi Goreng</span><span class="price">Rp15.000</span></li>
                 <li><span class="item-name">Mie Goreng</span><span class="price">Rp13.000</span></li>
                 <li><span class="item-name">Nasi Ayam Geprek</span><span class="price">Rp17.000</span></li>
-                <li><span class="item-name">Soto Ayam</span><span class="price">Rp14.000</span></li>
-                <li><span class="item-name">Nasi Rames</span><span class="price">Rp12.000</span></li>
-            </ul>
-        </div>
-
-        <!-- Menu Minuman -->
-        <div id="minuman">
-            <h2>Minuman</h2>
-            <ul class="menu-list">
-                <li><span class="item-name">Kopi Hitam</span><span class="price">Rp5.000</span></li>
-                <li><span class="item-name">Teh Manis (Panas/Dingin)</span><span class="price">Rp4.000</span></li>
-                <li><span class="item-name">Es Jeruk</span><span class="price">Rp6.000</span></li>
-                <li><span class="item-name">Kopi Susu</span><span class="price">Rp7.000</span></li>
-                <li><span class="item-name">Air Mineral</span><span class="price">Rp3.000</span></li>
-            </ul>
-        </div>
-
-        <!-- Menu Snack -->
-        <div id="snack">
-            <h2>Snack / Makanan Ringan</h2>
-            <ul class="menu-list">
-                <li><span class="item-name">Gorengan (Tempe, Tahu, Bakwan)</span><span class="price">Rp1.500</span></li>
-                <li><span class="item-name">Pisang Goreng</span><span class="price">Rp5.000</span></li>
-                <li><span class="item-name">Kentang Goreng</span><span class="price">Rp7.000</span></li>
-                <li><span class="item-name">Kerupuk</span><span class="price">Rp1.000</span></li>
-                <li><span class="item-name">Roti Bakar</span><span class="price">Rp8.000</span></li>
-            </ul>
-        </div>
-    </div>
-
-</body>
-</html>
+                <li><span class="item-name">Soto Ayam</span><span class="price">
