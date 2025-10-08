@@ -1,5 +1,4 @@
-
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -11,14 +10,96 @@
             margin: 0;
             background-color: #f4f4f4;
             color: #333;
-            scroll-behavior: smooth;
         }
         header {
             background-color: #6f4e37;
             color: white;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(
-         
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #6f4e37;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .menu-section {
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        .item-name {
+            font-weight: bold;
+        }
+        .price {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Menu Warkop Makni</h1>
+        <p>Selamat datang di Warung Kopi Makni!</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Makanan -->
+        <div class="menu-section">
+            <h2>Makanan</h2>
+            <ul>
+                <li><span class="item-name">Nasi Goreng</span><span class="price">Rp15.000</span></li>
+                <li><span class="item-name">Mie Goreng</span><span class="price">Rp13.000</span></li>
+                <li><span class="item-name">Nasi Ayam Geprek</span><span class="price">Rp17.000</span></li>
+                <li><span class="item-name">Soto Ayam</span><span class="price">Rp14.000</span></li>
+                <li><span class="item-name">Nasi Rames</span><span class="price">Rp12.000</span></li>
+            </ul>
+        </div>
+
+        <!-- Minuman -->
+        <div class="menu-section">
+            <h2>Minuman</h2>
+            <ul>
+                <li><span class="item-name">Kopi Hitam</span><span class="price">Rp5.000</span></li>
+                <li><span class="item-name">Teh Manis (Panas/Dingin)</span><span class="price">Rp4.000</span></li>
+                <li><span class="item-name">Es Jeruk</span><span class="price">Rp6.000</span></li>
+                <li><span class="item-name">Kopi Susu</span><span class="price">Rp7.000</span></li>
+                <li><span class="item-name">Air Mineral</span><span class="price">Rp3.000</span></li>
+            </ul>
+        </div>
+
+        <!-- Makanan Ringan -->
+        <div class="menu-section">
+            <h2>Makanan Ringan</h2>
+            <ul>
+                <li><span class="item-name">Gorengan (Tempe, Tahu, Bakwan)</span><span class="price">Rp1.500</span></li>
+                <li><span class="item-name">Pisang Goreng</span><span class="price">Rp5.000</span></li>
+                <li><span class="item-name">Kentang Goreng</span><span class="price">Rp7.000</span></li>
+                <li><span class="item-name">Kerupuk</span><span class="price">Rp1.000</span></li>
+                <li><span class="item-name">Roti Bakar</span><span class="price">Rp8.000</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+            
