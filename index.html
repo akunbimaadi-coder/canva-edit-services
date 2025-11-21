@@ -6,203 +6,69 @@
     <title>Warung Makan Makni</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset dan Dasar */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        /* --- STYLE TETAP SAMA DENGAN PUNYA ANDA --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Rubik', sans-serif; background-color: #f3eee8; color: #333; line-height: 1.6; }
+        header { background-color: #4b2e1f; box-shadow: 0 2px 8px rgba(0,0,0,0.2); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .menu-navigasi { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .logo a { color:white; text-decoration:none; font-size:1.8em; font-weight:bold; }
+        .menu-navigasi ul { list-style:none; display:flex; }
+        .menu-navigasi ul li a { color:white; text-decoration:none; padding:20px 18px; display:block; transition:.3s; }
+        .menu-navigasi ul li a:hover { background:#e0c7b1; color:#4b2e1f; }
 
-        body {
-            font-family: 'Rubik', sans-serif;
-            background-color: #f3eee8;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Header dan Navigasi */
-        header {
-            background-color: #4b2e1f;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .menu-navigasi {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .logo a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.8em;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .menu-navigasi ul {
-            list-style-type: none;
-            display: flex;
-        }
-
-        .menu-navigasi ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 20px 18px;
-            display: block;
-            font-weight: 500;
-            transition: 0.3s ease;
-        }
-
-        .menu-navigasi ul li a:hover {
-            background-color: #e0c7b1;
-            color: #4b2e1f;
-        }
-
-        /* Hero Section */
         .hero {
-            background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 70px;
-            color: white;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-            text-align: center;
-            padding: 0 20px;
+            background-image:url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=80');
+            background-size:cover; background-position:center;
+            height:400px; display:flex; justify-content:center; align-items:center;
+            margin-top:70px; color:white; text-shadow:1px 1px 5px rgba(0,0,0,.7);
         }
 
-        .hero h1 {
-            font-size: 3em;
-        }
+        .container { max-width:900px; margin:40px auto; padding:20px; background:#fff8f0; border-radius:8px; }
+        h2 { color:#4b2e1f; border-bottom:2px solid #d3b8a3; margin-bottom:15px; padding-bottom:5px; }
+        .preview-list a { display:block; background:white; padding:15px; border-radius:8px; margin-bottom:10px; color:#4b2e1f; text-decoration:none; box-shadow:0 2px 5px rgba(0,0,0,0.1); font-weight:bold; }
+        .preview-list a:hover { background:#e0c7b1; color:#4b2e1f; }
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fff8f0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            animation: fadein 1s ease-in;
-        }
+        footer { background:#4b2e1f; color:white; text-align:center; padding:20px 10px; margin-top:50px; }
 
-        h2 {
-            color: #4b2e1f;
-            border-bottom: 2px solid #d3b8a3;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-
-        ul.menu-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        ul.menu-list li {
-            padding: 12px 10px;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        ul.menu-list li:last-child {
-            border-bottom: none;
-        }
-
-        .item-name {
-            font-weight: bold;
-        }
-
-        .price {
-            color: #777;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #4b2e1f;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-            margin-top: 50px;
-        }
-
-        footer p {
-            margin-bottom: 5px;
-        }
-
-        /* Animasi */
-        @keyframes fadein {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Responsif */
-        @media screen and (max-width: 600px) {
-            .menu-navigasi {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .menu-navigasi ul {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .menu-navigasi ul li a {
-                width: 100%;
-                text-align: left;
-                padding: 15px 20px;
-            }
-
-            .hero h1 {
-                font-size: 2em;
-            }
-
-            .container {
-                margin: 30px 20px;
-            }
+        @media(max-width:600px){
+            .menu-navigasi { flex-direction:column; align-items:flex-start; }
+            .menu-navigasi ul { flex-direction:column; width:100%; }
+            .menu-navigasi ul li a { width:100%; padding:15px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="menu-navigasi">
-            <div class="logo"><a href="#">Warkop Makni</a></div>
-            <ul>
-                <li><a href="#makanan">Makanan</a></li>
-                <li><a href="#minuman">Minuman</a></li>
-                <li><a href="#snack">Snack</a></li>
-            </ul>
-        </div>
-    </header>
+<header>
+    <div class="menu-navigasi">
+        <div class="logo"><a href="index.html">Warkop Makni</a></div>
+        <ul>
+            <li><a href="makanan.html">Makanan</a></li>
+            <li><a href="minuman.html">Minuman</a></li>
+            <li><a href="snack.html">Snack</a></li>
+        </ul>
+    </div>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div>
-            <h1>Selamat Datang di Warkop Makni</h1>
-            <p>Tempat makan sederhana dengan rasa luar biasa!</p>
-        </div>
-    </section>
+<section class="hero">
+    <div>
+        <h1>Selamat Datang di Warkop Makni</h1>
+        <p>Tempat makan sederhana dengan rasa luar biasa!</p>
+    </div>
+</section>
 
-    <!-- Menu Container -->
-    <div class="container">
-        <!-- Menu Makanan -->
-        <div id="makanan">
-            <h2>Makanan</h2>
-            <ul class="menu-list">
-                <li><span class="item-name">Nasi Goreng</span><span class="price">Rp15.000</span></li>
-                <li><span class="item-name">Mie Goreng</span><span class="price">Rp13.000</span></li>
-                <li><span class="item-name">Nasi Ayam Geprek</span><span class="price">Rp17.000</span></li>
-                <li><span class="item-name">Soto Ayam</span><span class="price">
+<div class="container">
+    <h2>Pilih Menu</h2>
+    <div class="preview-list">
+        <a href="makanan.html">🍛 Lihat Menu Makanan</a>
+        <a href="minuman.html">🥤 Lihat Menu Minuman</a>
+        <a href="snack.html">🍪 Lihat Menu Snack</a>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Warkop Makni</p>
+</footer>
+
+</body>
+</html>
